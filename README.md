@@ -165,6 +165,73 @@ not lets go with setup time.
 
 <img width="1231" alt="image" src="https://user-images.githubusercontent.com/110079648/190896709-fa2c1f80-752c-47c3-94a8-5c924dbe87b2.png">
 
+<img width="1144" alt="image" src="https://user-images.githubusercontent.com/110079648/190896819-3c656ba3-3257-4bdc-8c36-03d70241d9d7.png">
+
+AAT-addition.
+RAT subtraction.
+RAT defined at destination and from that we go back every node by subtracting delays to find their respective RAT, so that we can find out what causing negative slack.
+based on that we modify that node. that is called as Engineering Change Order(ECO).
+
+<img width="1279" alt="image" src="https://user-images.githubusercontent.com/110079648/190897052-bbbb20b5-9534-443d-bc13-568388ab124e.png">
+
+<img width="1159" alt="image" src="https://user-images.githubusercontent.com/110079648/190897058-a589486b-aac6-4e0b-bcc7-cdf309e836c7.png">
+
+<img width="1159" alt="image" src="https://user-images.githubusercontent.com/110079648/190897102-e1acc652-7947-4686-b7a6-ecd82220cbb6.png">
+
+<img width="1210" alt="image" src="https://user-images.githubusercontent.com/110079648/190897111-bd063bca-d780-44a3-80d2-bfcb28439f29.png">
+ 
+ for setup analysis we take the lowest and for( hold we take the highest RAT)? 
+ 
+ <img width="1190" alt="image" src="https://user-images.githubusercontent.com/110079648/190897220-2d9983fb-26f2-416a-a5af-41c2bee6684e.png">
+
+<img width="1169" alt="image" src="https://user-images.githubusercontent.com/110079648/190897239-98a7cfde-6b74-4c56-91c9-0028e8dc5d2a.png">
+
+<img width="1194" alt="image" src="https://user-images.githubusercontent.com/110079648/190897307-3e6330d6-cb30-4b47-b9f8-3866e3063002.png">
+
+if delay of d(2) is 2-0.35 i.e d(1.65)(diif cell of same fun) the slack would be zero. that is Engineering change order ECO.
+
+<img width="1168" alt="image" src="https://user-images.githubusercontent.com/110079648/190897438-8d6d4cdc-9ab0-4e98-b0f1-e627803b4a7a.png">
+ 
+ at A0 also we can reduce delay by connecting a lunch flop for lower delay.
+
+## introduction to GBA-PBA analysis 
+ GBA is Wrost case analysis (take all the wrost case paths)
+ PBA take real path/ actual path that will be traced on sillicon.
+ 
+ <img width="1168" alt="image" src="https://user-images.githubusercontent.com/110079648/190897581-c8332ccb-900f-459b-bce7-2c56c203c13e.png">
+
+Lets go for PBA.
+
+  <img width="1229" alt="image" src="https://user-images.githubusercontent.com/110079648/190897618-bab325d6-c694-4131-866d-85b814573a8e.png">
+
+<img width="985" alt="image" src="https://user-images.githubusercontent.com/110079648/190897665-1062a822-6480-4e47-be95-a8b160838c7d.png">
+
+<img width="1184" alt="image" src="https://user-images.githubusercontent.com/110079648/190897730-c212c830-88a1-4dcd-9b51-e1df2b54c6b7.png">
+ 
+ <img width="1259" alt="image" src="https://user-images.githubusercontent.com/110079648/190901583-a283e427-c3a4-466a-8182-dd42579796c0.png">
+
+<img width="1334" alt="image" src="https://user-images.githubusercontent.com/110079648/190901744-5c6a2216-993a-4d44-8745-8f5286450a56.png">
+
+########################################################### Transistor level circuits
+
+# Transistor level Circuits 
+
+<img width="1355" alt="image" src="https://user-images.githubusercontent.com/110079648/190901813-55b52ae8-dbec-47a8-85a2-0e92e8bb2403.png">
+
+<img width="1367" alt="image" src="https://user-images.githubusercontent.com/110079648/190901904-b666bc0a-168d-4371-bc35-e58174d43942.png">
+
+Lanch flop gets clock after 2 buffer delays and capture flop gets clock after 3 buffer delays
+
+<img width="1333" alt="image" src="https://user-images.githubusercontent.com/110079648/190902016-6e022eae-6be9-47c0-9ccc-74908dd01c15.png">
+
+<img width="1357" alt="image" src="https://user-images.githubusercontent.com/110079648/190902060-d3b9a8d3-8ecf-475c-8327-bdf4f020a96b.png">
+
+<img width="295" alt="image" src="https://user-images.githubusercontent.com/110079648/190902078-93ae7d15-1e6f-4bee-af89-fd96d36f1a80.png">
+ 
+ <img width="1358" alt="image" src="https://user-images.githubusercontent.com/110079648/190902098-f1b42639-7153-426a-98c9-4ca09a09759c.png">
+
+
+
 
 
 
