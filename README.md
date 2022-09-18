@@ -308,6 +308,41 @@ It is done in foundry
 ######################################################################################
 # SETUP TIME GRAPHICAL TO TEXTUAL CONVERSION
 
+<img width="683" alt="image" src="https://user-images.githubusercontent.com/110079648/190914743-595b2611-c42f-4474-8db4-0d04245bf793.png">
+ 
+ <img width="955" alt="image" src="https://user-images.githubusercontent.com/110079648/190914764-f8d98020-1069-4fbf-b0c9-07d485bacb0a.png">
+
+<img width="1424" alt="image" src="https://user-images.githubusercontent.com/110079648/190914873-ad375209-a3cd-48a6-884d-d561d595c986.png">
+
+<img width="1436" alt="image" src="https://user-images.githubusercontent.com/110079648/190915084-e8a1babb-d4e9-4973-8e9d-8ab3f7fc1787.png">
+
+# Hold Analysis Single Clock
+
+<img width="1193" alt="image" src="https://user-images.githubusercontent.com/110079648/190915174-a3fd5a09-bef5-46b3-a597-72fc298883c4.png">
+
+<img width="1188" alt="image" src="https://user-images.githubusercontent.com/110079648/190915373-d592f7d0-d67e-43e5-82a8-48a1db6349b3.png">
+
+<img width="1107" alt="image" src="https://user-images.githubusercontent.com/110079648/190915385-ed326681-7b14-427c-8ac4-0535106950f8.png">
+
+> Since there is only one edge jitter value of hold is less compared to setup(2 edges).
+
+<img width="1268" alt="image" src="https://user-images.githubusercontent.com/110079648/190915485-9f09af98-b49d-4fa8-8b9f-f99a743abb2a.png">
+
+<img width="1355" alt="image" src="https://user-images.githubusercontent.com/110079648/190915574-7f750e54-d92b-4261-81ed-e6a3f095b307.png">
+
+# Hold Analysis Single Clock Textual Representation
+
+<img width="660" alt="image" src="https://user-images.githubusercontent.com/110079648/190915682-fc3a1961-2b85-48ed-9a12-433c7784d007.png">
+ 
+<img width="1014" alt="image" src="https://user-images.githubusercontent.com/110079648/190915699-a1a5d600-e70d-4f9e-ac94-8365d434b460.png">
+
+<img width="1435" alt="image" src="https://user-images.githubusercontent.com/110079648/190915943-32f878af-0c35-496e-91a9-64eafbca2cf0.png">
+ 
+ # OCV : On-Chip Variation
+ 
+ 
+
+ 
 
 
 
