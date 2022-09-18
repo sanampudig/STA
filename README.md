@@ -230,6 +230,36 @@ Lanch flop gets clock after 2 buffer delays and capture flop gets clock after 3 
  
  <img width="1358" alt="image" src="https://user-images.githubusercontent.com/110079648/190902098-f1b42639-7153-426a-98c9-4ca09a09759c.png">
 
+<img width="1408" alt="image" src="https://user-images.githubusercontent.com/110079648/190902545-44259542-5d08-4baf-877d-91cb5e003d00.png">
+
+<img width="1376" alt="image" src="https://user-images.githubusercontent.com/110079648/190902622-ec3969ba-a6f3-4967-9851-42a91f2be2c2.png">
+
+<img width="1390" alt="image" src="https://user-images.githubusercontent.com/110079648/190902667-59fc6464-7c20-4163-bb2d-8a1f77a07eb9.png">
+
+<img width="1367" alt="image" src="https://user-images.githubusercontent.com/110079648/190902691-b4546f45-7429-4bab-927c-849f4b8c5341.png">
+
+<img width="1435" alt="image" src="https://user-images.githubusercontent.com/110079648/190902769-6b60369a-7f0c-47e6-aac2-aa886271f66f.png"> 
+
+<img width="1405" alt="image" src="https://user-images.githubusercontent.com/110079648/190902865-09d642a6-d702-4827-ba4c-e04880343b21.png">
+
+<img width="1418" alt="image" src="https://user-images.githubusercontent.com/110079648/190903004-3203fe66-d932-4f2e-b8be-dcbb43075478.png">
+
+**Setup Time** is the time before rising edge of CLK, that input D become valid i.e. 'D' input has to be stable such that Qm is sent out, to Q reliably
+
+> Input 'D' takes at least 3 inverter delays (Inv1, Inv3 and Inv5/Inv2) + 1 transmission gate delay (Tr1) to become stable before rising edge of CLK
+
+> Setup Time = 3 Inverter delay + 1 Transmission gate delay
+
+
+
+
+
+
+
+
+
+
+
 
 
 
