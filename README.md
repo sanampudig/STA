@@ -250,8 +250,63 @@ Lanch flop gets clock after 2 buffer delays and capture flop gets clock after 3 
 
 > Setup Time = 3 Inverter delay + 1 Transmission gate delay
 
+<img width="1414" alt="image" src="https://user-images.githubusercontent.com/110079648/190904279-861a60bd-ba10-4ca3-8dda-9ea2b8eafb21.png">
 
+> CIk-Q delay is the time needed to propagate 'Qm' to 'Q'.
+> Note, that 'D' (or 'Qm' from low 'CLK') was stable till output of 'Inv5'. So the time required, to propagate is 1
+> Clk-Q = transmission gate delay(tr4) + 1 inverter delay(inv6)
 
+> Hold Time is the time for which 'D' input remain valid after clock edge. In this case, 'Tr1' is OFF after rising 'CLK'. So, 'D' is allowed to change OR can change, immediately after rise 'CLK' edge. So **Hold time is 'zero'**
+ 
+<img width="1396" alt="image" src="https://user-images.githubusercontent.com/110079648/190904700-a5e170c1-ccb2-4efa-b819-e176457eebd6.png">
+
+> Hence finite Time 'S' required (before clk edge) for 'D' to reach QM i.e. internal delay of Mux1 = Setup time
+
+<img width="1018" alt="image" src="https://user-images.githubusercontent.com/110079648/190904758-17a290d2-dbf8-4434-87aa-68cf05d09d9e.png">
+
+> Clock edge dosent come exactly. Practically, there is a window in which the edge arives.
+
+<img width="1301" alt="image" src="https://user-images.githubusercontent.com/110079648/190904870-bb8826cc-ae95-4507-ad39-38746f382586.png">
+
+> Reason for having Clock window is clock network in which we have lot of gates that results in variations in clock. Each and Every buffer on sillicon is diffarent.
+
+<img width="755" alt="image" src="https://user-images.githubusercontent.com/110079648/190904951-65b995e9-031c-4e51-bab6-9ef27efd79e4.png">
+
+## Generating jitter values - Eye diagram
+It is done in foundry
+
+<img width="976" alt="image" src="https://user-images.githubusercontent.com/110079648/190905090-a0e8b991-b237-4d47-904a-3f5351400c1b.png">
+
+<img width="1130" alt="image" src="https://user-images.githubusercontent.com/110079648/190905107-facf9c85-1990-4bc8-a40a-7a2550666065.png">
+
+<img width="1141" alt="image" src="https://user-images.githubusercontent.com/110079648/190906435-7181d19a-c4ae-45bf-bfd4-3ba3dd1d6023.png">
+
+<img width="1168" alt="image" src="https://user-images.githubusercontent.com/110079648/190906628-3f481919-57ea-403c-997e-239666f4f96a.png">
+
+> ideal clock operates at 0 and 1. but practically, there might be voltage droop and ground bounce. this cause variations in clock levels
+
+<img width="411" alt="image" src="https://user-images.githubusercontent.com/110079648/190907602-201eb859-8646-4f0b-b57d-f2eedfd283db.png">
+
+<img width="1190" alt="image" src="https://user-images.githubusercontent.com/110079648/190907985-db73707e-2bf1-4ecb-85e8-fd265ffc09f3.png">
+
+<img width="1403" alt="image" src="https://user-images.githubusercontent.com/110079648/190908415-c1248a18-ea9f-4392-8a25-5c3305a9cdbd.png">
+
+<img width="1184" alt="image" src="https://user-images.githubusercontent.com/110079648/190908923-743e0de0-c8f5-46d3-8c6f-e7d6f8bc445a.png">
+
+> There is a temporary variation in clock period due to jitter
+
+<img width="1069" alt="image" src="https://user-images.githubusercontent.com/110079648/190909797-a0774a30-0316-40fa-ba34-efe1f0c0a837.png">
+
+<img width="424" alt="image" src="https://user-images.githubusercontent.com/110079648/190910010-03130c8f-5f49-4319-bab3-2923516bc47a.png">
+
+<img width="1330" alt="image" src="https://user-images.githubusercontent.com/110079648/190910531-85e5357e-cb98-4a5e-8308-f4b00d59e6eb.png">
+
+> SU-Setup Uncertanity
+
+<img width="1000" alt="image" src="https://user-images.githubusercontent.com/110079648/190910624-50561845-20f2-4ae6-9c89-3ee7471a6058.png">
+
+######################################################################################
+# SETUP TIME GRAPHICAL TO TEXTUAL CONVERSION
 
 
 
