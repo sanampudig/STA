@@ -486,6 +486,81 @@ these concepts will be same for these also
 # STA PART 2
 # ################################
 
+<img width="1415" alt="image" src="https://user-images.githubusercontent.com/110079648/190999613-e97a911f-402b-4573-9116-9f6bc1e1b36f.png">
+
+## Installing open timer
+make sure you have atleast
+- GNU C++ Compiler v7.3 with -std=c++1z
+- Clang C++ Compiler v6.0 with -std=c++17
+to check
+```
+$ gcc --version
+$ clang --version
+```
+
+install cmake with following command
+```
+$ sudo apt  install cmake
+```
+To install Opentimer
+```
+$ git clone https://github.com/OpenTimer/OpenTimer.git
+$ cd OpenTimer
+$ mkdir build
+$ cd build
+$ cmake ../
+$ sudo make 
+```
+to test
+```
+$ make test
+```
+in opentimer directory, use the following command to invoke open timer.
+```
+$ ./bin/ot-shell
+  ____              _______              
+ / __ \___  ___ ___/_  __(_)_ _  ___ ____
+/ /_/ / _ \/ -_) _ \/ / / /  ' \/ -_) __/
+\____/ .__/\__/_//_/_/ /_/_/_/_/\__/_/       v2.1.0
+    /_/                                     
+MIT License: type "license" to see more details.
+For help, type "help".
+For bug reports, issues, and manual, please see:
+<https://github.com/OpenTimer/OpenTimer>.
+```
+to know commands
+```
+ot> help
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
