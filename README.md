@@ -533,8 +533,19 @@ to know commands
 ot> help
 ```
 
+Exploring Example:
 
+<img width="518" alt="image" src="https://user-images.githubusercontent.com/110079648/191028675-173b6af3-663c-4f05-a5d1-678807504720.png">
 
+<img width="551" alt="image" src="https://user-images.githubusercontent.com/110079648/191029375-78d822ce-2f99-473d-a689-a8f748eecf41.png">
+
+<img width="847" alt="image" src="https://user-images.githubusercontent.com/110079648/191029417-be1329fb-408a-45f4-bd47-1a15d69a9b40.png">
+
+<img width="1373" alt="image" src="https://user-images.githubusercontent.com/110079648/191029842-0af6b182-4eb7-493e-a69b-9f3fb87c5786.png">
+
+<img width="1335" alt="image" src="https://user-images.githubusercontent.com/110079648/191029894-3c5aca13-8abf-4e8d-9a6e-8278c766fd2e.png">
+
+<img width="1281" alt="image" src="https://user-images.githubusercontent.com/110079648/191030018-7ecff4e6-bf3e-4f48-9566-93681350d7b7.png">
 
 
 
