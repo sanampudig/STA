@@ -340,18 +340,151 @@ It is done in foundry
  
  # OCV : On-Chip Variation
  
+> Sources of Variation : Etching Process Variation
+
+<img width="1399" alt="image" src="https://user-images.githubusercontent.com/110079648/190916085-fa465971-9c44-41e9-a21e-c5d279b49f79.png">
+
+Etching process defines the structures in layout (metal,diff..)(rectangle)
+
+<img width="429" alt="image" src="https://user-images.githubusercontent.com/110079648/190916193-822e2238-02cb-43ce-9dbb-641596207817.png">
+
+<img width="1425" alt="image" src="https://user-images.githubusercontent.com/110079648/190916223-aae6f7dc-6dbe-44c9-bd62-a219fcf47f09.png">
+
+ <img width="1080" alt="image" src="https://user-images.githubusercontent.com/110079648/190916255-d0b879fd-1700-4c01-9f18-b009aae45cec.png">
+
+Overlap area is diffarent. 
+
+it is variation in one inverter. In chain of inverters lot more changes
+
+<img width="1370" alt="image" src="https://user-images.githubusercontent.com/110079648/190916854-c0d8caa9-d319-46c1-a540-55cbd83f1522.png">
+
+Gates in middle have some kind of variation as they connected to inverters only
+inverters at ends may have another variation as they connected to flops.
+
+<img width="978" alt="image" src="https://user-images.githubusercontent.com/110079648/190917265-592abda6-2bb4-477f-913e-30ec6342f131.png">
+
+> Sources of Variation : Oxide Thickness
+
+<img width="1438" alt="image" src="https://user-images.githubusercontent.com/110079648/190917352-0414f9be-f92f-44cb-a7d8-8d92e061e862.png">
  
+<img width="1394" alt="image" src="https://user-images.githubusercontent.com/110079648/190917516-c9ce7788-23cc-4a7d-adf4-5188c924e411.png">
 
+Middle invs have slighntly lower variations
+
+<img width="1155" alt="image" src="https://user-images.githubusercontent.com/110079648/190918022-e1a4aec9-acf5-40b4-b836-d0f0ea4e452e.png">
+
+<img width="1189" alt="image" src="https://user-images.githubusercontent.com/110079648/190918370-08474730-1199-4df1-8952-39e9f38f3223.png">
+
+<img width="1210" alt="image" src="https://user-images.githubusercontent.com/110079648/190918626-aea546b3-8692-42c3-a510-cf2fa64236f3.png">
+
+<img width="1231" alt="image" src="https://user-images.githubusercontent.com/110079648/190918648-7655d0f7-ae69-45af-8a71-a3e1c11904ae.png">
+
+<img width="1127" alt="image" src="https://user-images.githubusercontent.com/110079648/190919006-6eac1b1d-3b63-4634-8666-f755792963fc.png">
+
+<img width="1196" alt="image" src="https://user-images.githubusercontent.com/110079648/190919076-e9d628fe-7b0f-4810-bac8-ae55b5572bab.png">
+
+R is not constant, but varies of Id
+
+ <img width="855" alt="image" src="https://user-images.githubusercontent.com/110079648/190919141-9371db76-0556-427f-9907-7a3a06fbf00e.png">
+
+<img width="960" alt="image" src="https://user-images.githubusercontent.com/110079648/190919169-2bf83a86-801a-411d-969d-b493f114cb65.png">
+
+<img width="1381" alt="image" src="https://user-images.githubusercontent.com/110079648/190919283-1fd4662b-6a44-4e65-8b0c-3e69d4236d79.png">
+
+> If these series of inverters are designed to have 100ps delay, it might end up having 101ps,102ps,99ps etc.
+
+<img width="1186" alt="image" src="https://user-images.githubusercontent.com/110079648/190958157-a6b87d08-d3ad-4ebe-8007-131c858911ba.png">
+
+# OCV timing and pessimism removal
+
+<img width="1438" alt="image" src="https://user-images.githubusercontent.com/110079648/190958372-83835e8b-7eb1-4f49-bca3-832524035ac9.png">
+
+OCV on setup timing analysis
+any of flowing combination
+DRT +20% +20% -20% -20%
+DAT +20% -20% +20% -20%
+
+<img width="696" alt="image" src="https://user-images.githubusercontent.com/110079648/190958946-7a713e68-6468-44e3-bd62-8e16ccb38c5e.png">
  
+ if are reducing by 20%(i.e.-20%) that is **CLock Pull-in**
+ (we are reducing delay of every cell in clock path)
+ 
+ <img width="1440" alt="image" src="https://user-images.githubusercontent.com/110079648/190959236-5539a799-4b1c-4976-ab1b-f5490f23378e.png">
 
+if are increasing by 20%(i.e.+20%) that is **CLock Pull-out**
+ (we are increasing delay of every cell in clock path)
+ 
+  <img width="525" alt="image" src="https://user-images.githubusercontent.com/110079648/190959369-8ed9e5ae-9043-49a0-bb96-a572f3b6c506.png">
+ 
+ this will give more realistic and conservative approch.
+ Clock pull in for DRT and Clock pull out for DAT
+ 
+ <img width="1355" alt="image" src="https://user-images.githubusercontent.com/110079648/190959646-6cc14b66-4b40-4f58-9821-945392520b53.png">
 
+<img width="1365" alt="image" src="https://user-images.githubusercontent.com/110079648/190959681-763227e9-2c1c-4ebe-8924-8de361f0e9e7.png">
 
+<img width="547" alt="image" src="https://user-images.githubusercontent.com/110079648/190959889-95c3a86e-a19c-43eb-afac-2d2b5fbc9ab8.png">
 
+<img width="1376" alt="image" src="https://user-images.githubusercontent.com/110079648/190960046-6cb5d7c1-d594-43e2-b27e-851b93546f00.png">
 
+in DRT lets delete old numbers and keep new numbers
 
+<img width="1433" alt="image" src="https://user-images.githubusercontent.com/110079648/190960347-3702a67f-fb9a-4711-9536-569a3a29cc18.png">
 
+The Launch clock section and capture clock section highlighted part is common
 
+<img width="1075" alt="image" src="https://user-images.githubusercontent.com/110079648/190960625-131e7b9e-f3a5-4c13-bc8b-64d87b7d5e6c.png">
 
+> A cell is showing 2 diffarent delays which is practically not possible.
+
+> At a time instant (say 't'), the delay of cell 'b1' can be either 0.043ns or 0.0344ns
+
+> So there is an additional pessimism of |0.043ns - 0.0344ns| = 0.0086ns
+> We need to remove this Pessimism
+
+<img width="1402" alt="image" src="https://user-images.githubusercontent.com/110079648/190961578-9fadcd27-8406-4ea8-9e1e-b513ed66627d.png">
+
+we can Add Additional Pessimium to DRT or subtract from DAT.
+
+<img width="1355" alt="image" src="https://user-images.githubusercontent.com/110079648/190961864-f4c94533-1a67-4b6e-bd2d-7597b69d6c84.png">
+ 
+ Now lets do this on hold timing
+ 
+ <img width="1426" alt="image" src="https://user-images.githubusercontent.com/110079648/190962345-12080df4-aca7-44a8-b688-55f324149213.png">
+
+<img width="628" alt="image" src="https://user-images.githubusercontent.com/110079648/190962528-580291e3-9f09-4a41-a911-84cdcd9534b0.png">
+
+<img width="755" alt="image" src="https://user-images.githubusercontent.com/110079648/190962556-10ac7b4c-1030-47b2-b7a4-8c6e6d1d90a4.png">
+
+<img width="1437" alt="image" src="https://user-images.githubusercontent.com/110079648/190962810-85e474f8-26db-423b-80a4-4ba6c3074c00.png">
+
+<img width="1223" alt="image" src="https://user-images.githubusercontent.com/110079648/190962956-66a50b28-00db-4e6e-a63e-01b5a3af5b26.png">
+
+<img width="392" alt="image" src="https://user-images.githubusercontent.com/110079648/190963075-759a2871-0378-410c-b260-2cc1db1a12c8.png">
+
+<img width="737" alt="image" src="https://user-images.githubusercontent.com/110079648/190963344-b71337cd-611e-41aa-9cc5-7b6ca8280981.png">
+
+<img width="1423" alt="image" src="https://user-images.githubusercontent.com/110079648/190963646-76fcec50-3875-43fe-9650-cd3954a96421.png">
+
+we can remove Additional pessimissum from DRT or add to DAT
+
+<img width="1437" alt="image" src="https://user-images.githubusercontent.com/110079648/190963825-62da5639-d9a1-4e42-8a0a-1d9c4014fd85.png">
+
+###############################
+
+<img width="1147" alt="image" src="https://user-images.githubusercontent.com/110079648/190964049-ef49f671-8479-4819-a40e-4e032564eddd.png">
+
+these concepts will be same for these also
+
+<img width="990" alt="image" src="https://user-images.githubusercontent.com/110079648/190964270-4e4536fc-de27-435a-b629-f0e4bbdc377f.png">
+
+<img width="1071" alt="image" src="https://user-images.githubusercontent.com/110079648/190964369-24687bed-e1dd-44f0-b1a5-6c8e53affec8.png">
+
+<img width="1021" alt="image" src="https://user-images.githubusercontent.com/110079648/190964437-87da9ec3-72e0-438f-98c9-70e2e9f0242f.png">
+
+# ################################
+# STA PART 2
+# ################################
 
 
 
