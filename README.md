@@ -1,4 +1,5 @@
 # STA - Static timing analysis
+<img width="601" alt="image" src="https://user-images.githubusercontent.com/110079648/191461642-7ab4f453-5601-4170-91ce-bf6ad9e414bd.png">
 
 ## 1. Introduction: Static timing analysis Part 1 "checks"
 
