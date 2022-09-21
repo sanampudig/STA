@@ -1,27 +1,35 @@
-# STA
+# STA - Static timing analysis
 
-## Static timing analysis
-checks, constraints, library
-
-## Static timing analysis Part 1 "checks"
+## 1. Introduction: Static timing analysis Part 1 "checks"
 
 <img width="1324" alt="image" src="https://user-images.githubusercontent.com/110079648/190870494-6458f966-d7f7-4687-bfe4-13d382415fca.png">
 
+> Input port to D pin of Lauch Flop.
+
 <img width="1303" alt="image" src="https://user-images.githubusercontent.com/110079648/190870534-fb7c2d8f-05de-4d95-8335-56c098e27050.png">
+
+> Clock port of capture flop to Output port
 
 <img width="1334" alt="image" src="https://user-images.githubusercontent.com/110079648/190870572-128aee34-04d2-4ed9-805a-9fe43a021a78.png">
 
+> Clock port of lauch flop to D pin of Capture flop
+
 <img width="1363" alt="image" src="https://user-images.githubusercontent.com/110079648/190870573-d5f596e9-2707-4f06-9770-2d285ea81e8a.png">
+
+ > Input port to Output port
 
 <img width="1354" alt="image" src="https://user-images.githubusercontent.com/110079648/190870581-85909633-e22e-416f-b66f-62aa6176a198.png">
 
+These are valid paths to caluculate timing
+
 <img width="1313" alt="image" src="https://user-images.githubusercontent.com/110079648/190870624-ed535397-b007-4b1f-aaf3-98f31b4cc7f9.png">
 
-Arival time is caluculated at end points.
+> The time required by a signal to travel form start point to the end point is called **Arrival time**
+> Arival time is caluculated at end points.
 
 <img width="1316" alt="image" src="https://user-images.githubusercontent.com/110079648/190870654-181008e3-daaa-4d5d-a919-8660e5dfdb5a.png">
 
-Required time is expected time of signal arival
+> **Required time** is expected time of signal arival
 
 <img width="1345" alt="image" src="https://user-images.githubusercontent.com/110079648/190870745-dfb3c9e6-aa6e-4586-9899-b2d11facd4cd.png">
 
