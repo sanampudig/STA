@@ -47,10 +47,14 @@ let arival time is 3.5ns
 
 <img width="1152" alt="image" src="https://user-images.githubusercontent.com/110079648/190870935-1b72aacd-1de2-4a1c-9494-6ffa137ea93a.png">
 
-Max difference (max slack)= 0.8ns =>setup slack, setup timing, setup analysis (Setup slack = Expected time max - Arrival time)
+```
+Max difference (max slack)= 0.8ns =>setup slack, setup timing, setup analysis
+(Setup slack = Expected time max - Arrival time)
+```
+```
 Min difference (min slack)=-0.1ns =>hold slack, hold timing, hold analysis  (Hold slack = Arrival time - Expected time min)
- 
- ## Types of setup/hold analysis
+```
+## 2. Types of setup/hold analysis
  
 Types of setup/hold analysis
 1. reg2reg
@@ -82,38 +86,42 @@ Clock analysis
 
 <img width="1366" alt="image" src="https://user-images.githubusercontent.com/110079648/190871323-5cb86380-4045-42b0-9dde-7684e5fffacc.png">
  
-Cat 2,3,4 belongs to IO timing 
+> Cat 2,3,4 belongs to IO timing 
 
 <img width="1093" alt="image" src="https://user-images.githubusercontent.com/110079648/190871547-10796f35-6420-4260-9690-805979cd142c.png">
 
-clock coming to capture flop is coming throgh an and gate. we are trying gate the clock. this thechnique is called ** clock gateing **. this is used to reduce the chip power. if that portion of circuit is not using we can turn of clock which imples flop dosent switches.
+```
+Clock coming to capture flop is coming throgh an and gate. we are trying gate the clock. this thechnique is called **clock gateing**. This is used to reduce the chip power. if that portion of circuit is not using we can turn of clock which imples flop dosent switches.
+```
 
 <img width="1375" alt="image" src="https://user-images.githubusercontent.com/110079648/190871567-1b04c473-a104-43c7-8eb8-2f8a76d99cdf.png">
 
-for flops we have asynchronous pins also present.
+> For flops we have asynchronous pins also present.
 
 <img width="1404" alt="image" src="https://user-images.githubusercontent.com/110079648/190871605-06124220-ba92-4d5c-b472-91b31f90d626.png">
 
-now the combination logic that connected to reset pin is replaced by and gate, this is done to save some power in reset path. if control is high, the gate is open.
+> Now the combination logic that connected to reset pin is replaced by and gate, this is done to save some power in reset path. if control is high, the gate is open.
 
 <img width="1410" alt="image" src="https://user-images.githubusercontent.com/110079648/190885750-aef6b504-5768-4c36-a4e2-3247a16e7541.png">
 
-a nd control signal should be in sync.to get them into synchronous level, so we take **a** and **ctrl** as final points to analise the ariving time.
+> And control signal should be in sync.to get them into synchronous level, so we take **a** and **ctrl** as final points to analise the ariving time.
 
 <img width="1406" alt="image" src="https://user-images.githubusercontent.com/110079648/190885946-106fa3cf-8cb4-4513-bdb0-09b51516179a.png">
 
-latch is level triggered. if previos flop to latch dosent met timing constraints, it can barrow some time from level triggerd latch. similarly flop connected at output of latch failted to meet timing constraints, latch can give time to lext flop. thats why latches are very important in design.
+```
+**latch** is level triggered. if previos flop to latch dosent met timing constraints, it can barrow some time from level triggerd latch. similarly flop connected at output of latch failted to meet timing constraints, latch can give time to lext flop. thats why latches are very important in design.
+```
 
 <img width="1411" alt="image" src="https://user-images.githubusercontent.com/110079648/190886130-42e0eed9-80c5-45c4-9fc5-8f4e053b00cb.png">
 
-## Slew/Transition analysis 
-there is some minium and maximum requirement of slew. 
+### Slew/Transition analysis 
+There is some minium and maximum requirement of slew. 
 slew and the transition analysis ensures that each and every point on this particular set of it meets that criteria.
 
-Basically if you the slew is too sharp, it will increase short circuit power and if it is too large then it will increase opening time for gate.
+> Basically if you the slew is too sharp, it will increase short circuit power and if it is too large then it will increase opening time for gate.
 
-slew analysis- 2parts
-data and clock
+Slew analysis has two parts i.e. data and clock
+
 data dosent switch so often as compared to clock.
 clock has to switch at equal intervels, that that's why the clock transition requirements becomes a bit stringent compared to the data requirements. 
  
@@ -121,23 +129,22 @@ clock has to switch at equal intervels, that that's why the clock transition req
 
 <img width="1412" alt="image" src="https://user-images.githubusercontent.com/110079648/190886377-25f47977-04ce-4b06-a442-7ea227959e06.png">
 
-## Load analysis
+### Load analysis
 fanout analysis- eg. if fanout is 3 whether it is able to charge that load or not.
 
 <img width="1385" alt="image" src="https://user-images.githubusercontent.com/110079648/190886419-2f0b08cf-c733-4f76-b3f2-f5d2db874d43.png">
 
-Capacitance
+> Capacitance
 
 <img width="1419" alt="image" src="https://user-images.githubusercontent.com/110079648/190886468-c6895bca-6c80-47b5-bad5-de1bf794a2ab.png">
 
-## Clock analysis
+### Clock analysis
 
 <img width="1396" alt="image" src="https://user-images.githubusercontent.com/110079648/190886518-e4a04ac7-d785-4c4e-9c2c-6a868cd03e9c.png">
 
  <img width="1426" alt="image" src="https://user-images.githubusercontent.com/110079648/190886587-dfb2f241-d7b3-4845-ae7e-aad1f3716463.png">
  
- ###################################################################
- reg2reg
+ ## 3. Detailed analysis of Reg2Reg
  
  <img width="1335" alt="image" src="https://user-images.githubusercontent.com/110079648/190896130-0da83810-ead4-48a4-a185-d02b3d26d0b1.png">
 
@@ -188,7 +195,7 @@ based on that we modify that node. that is called as Engineering Change Order(EC
 
 <img width="1210" alt="image" src="https://user-images.githubusercontent.com/110079648/190897111-bd063bca-d780-44a3-80d2-bfcb28439f29.png">
  
- for setup analysis we take the lowest and for( hold we take the highest RAT)? 
+ for setup analysis we take the lowest and for( hold we take the highest RAT)
  
  <img width="1190" alt="image" src="https://user-images.githubusercontent.com/110079648/190897220-2d9983fb-26f2-416a-a5af-41c2bee6684e.png">
 
