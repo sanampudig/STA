@@ -52,7 +52,8 @@ Max difference (max slack)= 0.8ns =>setup slack, setup timing, setup analysis
 (Setup slack = Expected time max - Arrival time)
 ```
 ```
-Min difference (min slack)=-0.1ns =>hold slack, hold timing, hold analysis  (Hold slack = Arrival time - Expected time min)
+Min difference (min slack)=-0.1ns =>hold slack, hold timing, hold analysis
+(Hold slack = Arrival time - Expected time min)
 ```
 ## 2. Types of setup/hold analysis
  
@@ -90,9 +91,8 @@ Clock analysis
 
 <img width="1093" alt="image" src="https://user-images.githubusercontent.com/110079648/190871547-10796f35-6420-4260-9690-805979cd142c.png">
 
-```
-Clock coming to capture flop is coming throgh an and gate. we are trying gate the clock. this thechnique is called **clock gateing**. This is used to reduce the chip power. if that portion of circuit is not using we can turn of clock which imples flop dosent switches.
-```
+
+> Clock coming to capture flop is coming throgh an and gate. we are trying gate the clock. this thechnique is called **clock gateing**. This is used to reduce the chip power. if that portion of circuit is not using we can turn of clock which imples flop dosent switches.
 
 <img width="1375" alt="image" src="https://user-images.githubusercontent.com/110079648/190871567-1b04c473-a104-43c7-8eb8-2f8a76d99cdf.png">
 
@@ -108,9 +108,9 @@ Clock coming to capture flop is coming throgh an and gate. we are trying gate th
 
 <img width="1406" alt="image" src="https://user-images.githubusercontent.com/110079648/190885946-106fa3cf-8cb4-4513-bdb0-09b51516179a.png">
 
-```
-**latch** is level triggered. if previos flop to latch dosent met timing constraints, it can barrow some time from level triggerd latch. similarly flop connected at output of latch failted to meet timing constraints, latch can give time to lext flop. thats why latches are very important in design.
-```
+
+> **latch** is level triggered. if previos flop to latch dosent met timing constraints, it can barrow some time from level triggerd latch. similarly flop connected at output of latch failted to meet timing constraints, latch can give time to lext flop. thats why latches are very important in design.
+
 
 <img width="1411" alt="image" src="https://user-images.githubusercontent.com/110079648/190886130-42e0eed9-80c5-45c4-9fc5-8f4e053b00cb.png">
 
@@ -209,12 +209,13 @@ if delay of d(2) is 2-0.35 i.e d(1.65)(diif cell of same fun) the slack would be
  
  at A0 also we can reduce delay by connecting a lunch flop for lower delay.
 
-## introduction to GBA-PBA analysis 
+## 4. introduction to GBA-PBA analysis 
  GBA is Wrost case analysis (take all the wrost case paths)
  PBA take real path/ actual path that will be traced on sillicon.
  
  <img width="1168" alt="image" src="https://user-images.githubusercontent.com/110079648/190897581-c8332ccb-900f-459b-bce7-2c56c203c13e.png">
-
+ 
+Path based analysis is more realistic than graph based analysis.
 Lets go for PBA.
 
   <img width="1229" alt="image" src="https://user-images.githubusercontent.com/110079648/190897618-bab325d6-c694-4131-866d-85b814573a8e.png">
@@ -227,15 +228,14 @@ Lets go for PBA.
 
 <img width="1334" alt="image" src="https://user-images.githubusercontent.com/110079648/190901744-5c6a2216-993a-4d44-8745-8f5286450a56.png">
 
-########################################################### Transistor level circuits
 
-# Transistor level Circuits 
+## 5. Transistor level Circuits 
 
 <img width="1355" alt="image" src="https://user-images.githubusercontent.com/110079648/190901813-55b52ae8-dbec-47a8-85a2-0e92e8bb2403.png">
 
 <img width="1367" alt="image" src="https://user-images.githubusercontent.com/110079648/190901904-b666bc0a-168d-4371-bc35-e58174d43942.png">
 
-Lanch flop gets clock after 2 buffer delays and capture flop gets clock after 3 buffer delays
+> Lanch flop gets clock after 2 buffer delays and capture flop gets clock after 3 buffer delays
 
 <img width="1333" alt="image" src="https://user-images.githubusercontent.com/110079648/190902016-6e022eae-6be9-47c0-9ccc-74908dd01c15.png">
 
@@ -287,7 +287,7 @@ Lanch flop gets clock after 2 buffer delays and capture flop gets clock after 3 
 
 <img width="755" alt="image" src="https://user-images.githubusercontent.com/110079648/190904951-65b995e9-031c-4e51-bab6-9ef27efd79e4.png">
 
-## Generating jitter values - Eye diagram
+## 6. Generating jitter values - Eye diagram
 It is done in foundry
 
 <img width="976" alt="image" src="https://user-images.githubusercontent.com/110079648/190905090-a0e8b991-b237-4d47-904a-3f5351400c1b.png">
@@ -320,8 +320,8 @@ It is done in foundry
 
 <img width="1000" alt="image" src="https://user-images.githubusercontent.com/110079648/190910624-50561845-20f2-4ae6-9c89-3ee7471a6058.png">
 
-######################################################################################
-# SETUP TIME GRAPHICAL TO TEXTUAL CONVERSION
+
+## 7.SETUP TIME GRAPHICAL TO TEXTUAL CONVERSION
 
 <img width="683" alt="image" src="https://user-images.githubusercontent.com/110079648/190914743-595b2611-c42f-4474-8db4-0d04245bf793.png">
  
@@ -331,7 +331,7 @@ It is done in foundry
 
 <img width="1436" alt="image" src="https://user-images.githubusercontent.com/110079648/190915084-e8a1babb-d4e9-4973-8e9d-8ab3f7fc1787.png">
 
-# Hold Analysis Single Clock
+## 8. Hold Analysis Single Clock
 
 <img width="1193" alt="image" src="https://user-images.githubusercontent.com/110079648/190915174-a3fd5a09-bef5-46b3-a597-72fc298883c4.png">
 
@@ -345,7 +345,7 @@ It is done in foundry
 
 <img width="1355" alt="image" src="https://user-images.githubusercontent.com/110079648/190915574-7f750e54-d92b-4261-81ed-e6a3f095b307.png">
 
-# Hold Analysis Single Clock Textual Representation
+## 9. Hold Analysis Single Clock Textual Representation
 
 <img width="660" alt="image" src="https://user-images.githubusercontent.com/110079648/190915682-fc3a1961-2b85-48ed-9a12-433c7784d007.png">
  
@@ -353,7 +353,7 @@ It is done in foundry
 
 <img width="1435" alt="image" src="https://user-images.githubusercontent.com/110079648/190915943-32f878af-0c35-496e-91a9-64eafbca2cf0.png">
  
- # OCV : On-Chip Variation
+ ## 10. OCV : On-Chip Variation
  
 > Sources of Variation : Etching Process Variation
 
@@ -410,7 +410,7 @@ R is not constant, but varies of Id
 
 <img width="1186" alt="image" src="https://user-images.githubusercontent.com/110079648/190958157-a6b87d08-d3ad-4ebe-8007-131c858911ba.png">
 
-# OCV timing and pessimism removal
+## 11. OCV timing and pessimism removal
 
 <img width="1438" alt="image" src="https://user-images.githubusercontent.com/110079648/190958372-83835e8b-7eb1-4f49-bca3-832524035ac9.png">
 
@@ -485,7 +485,7 @@ we can remove Additional pessimissum from DRT or add to DAT
 
 <img width="1437" alt="image" src="https://user-images.githubusercontent.com/110079648/190963825-62da5639-d9a1-4e42-8a0a-1d9c4014fd85.png">
 
-###############################
+## 12. Conclusion of workshop part`1
 
 <img width="1147" alt="image" src="https://user-images.githubusercontent.com/110079648/190964049-ef49f671-8479-4819-a40e-4e032564eddd.png">
 
@@ -497,13 +497,21 @@ these concepts will be same for these also
 
 <img width="1021" alt="image" src="https://user-images.githubusercontent.com/110079648/190964437-87da9ec3-72e0-438f-98c9-70e2e9f0242f.png">
 
+- We summarized rer2reg timing analysis. The concepts we learned for reg2reg analysis can be applied to any other setup/hold analysis.
+
+- While doing Slew/Transition analysis we will be using library setup and hold time.
+
+- Clock analysis is highly dependent on on-chip variation and pessimism removal.
+
+
+
 # ################################
 # STA PART 2
 # ################################
 
 <img width="1415" alt="image" src="https://user-images.githubusercontent.com/110079648/190999613-e97a911f-402b-4573-9116-9f6bc1e1b36f.png">
 
-## Installing open timer
+## 13. Installing open timer
 make sure you have atleast
 - GNU C++ Compiler v7.3 with -std=c++1z
 - Clang C++ Compiler v6.0 with -std=c++17
