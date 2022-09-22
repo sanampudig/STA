@@ -634,3 +634,11 @@ Exploring Example:
 
 
 
+## 10. Acknowledgments
+
+- Kunal Ghosh, Director, VSD Corp. Pvt. Ltd.
+
+## 11. Contact Information
+
+- Sanampudi Gopala Krishna Reddy, Postgraduate Student, International Institute of Information Technology, Bangalore  svgkr7@gmail.com
+- Kunal Ghosh, Director, VSD Corp. Pvt. Ltd. kunalghosh@gmail.com
